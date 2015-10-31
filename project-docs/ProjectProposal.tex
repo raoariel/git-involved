@@ -1,0 +1,179 @@
+
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{scrextend}
+\usepackage{gantt}
+\usepackage{pdflscape}
+
+
+\oddsidemargin0cm
+\topmargin-2cm     
+\textwidth16.5cm 
+\textheight23.5cm  
+
+\newcommand{\question}[2] {\vspace{.25in} \hrule\vspace{0.5em}
+\noindent{\bf #1: #2} \vspace{0.5em}
+\hrule \vspace{.10in}}
+\renewcommand{\part}[1] {\vspace{.10in} {\bf (#1)}}
+
+\newcommand{\myname}{Ariel Rao}
+\newcommand{\myandrew}{arielrao@cmu.edu}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+ 
+\pagestyle{fancyplain}
+\lhead{\fancyplain{}{\textbf{12-780 A2}}}     
+\rhead{\fancyplain{}{\myname\\ \myandrew}}
+\chead{\fancyplain{}{Project Proposal : Git Involved}}
+
+\setlength{\parskip}{1 pt}
+
+\definecolor{mygray}{RGB}{209,209,209}
+\definecolor{myred}{RGB}{255,87,106}
+\definecolor{myblue}{RGB}{0,119,255}
+
+\begin{document}
+
+\section{Project Overview}
+\textbf{Title:} Git Involved\\
+\textbf{Name:} Ariel Rao\\
+\textbf{Date:} 10/30/2015\\
+\textbf{Contact Info:} arielrao@andrew.cmu.edu
+
+\section{Introduction}
+\subsection{Purpose}
+The purpose of the project is to develop a web application that helps connect people with projects on Github. Specifically, this application hopes to connect developers and designers with projects that could use their support. This application will also connect orphaned projects and organizations with interested parties.
+
+\tableofcontents{}
+\newpage
+
+\section{Background}
+\subsection{Industry \& Domain}
+This project targets the open source (software) community and individual contributors. 
+
+\section{Potential Users and Customers}
+\begin{description}
+\item [$\bullet$ Students] A good way to gain experience in software engineering and build up a portfolio.
+\item [$\bullet$ Hackathons] Connect ideas developed in hackathons with additional people to sustain development beyond event.
+\item [$\bullet$ Non-profit Organizations] Promote low resource organizations looking for developer talent.
+\item [$\bullet$ Github Orphans] Find new maintainers for projects/organizations that have been orphaned.
+\end{description}
+
+\section{Main features for product}
+\begin{description}
+\item [$\bullet$ Interested Contributors] Let people who are interested in contributing sign up using Github credentials and list their skill sets. 
+\item [$\bullet$ Projects Looking for Contributors] Let projects hosted on Github register to seek contributors.
+\item [$\bullet$ Projects Looking for Maintainers] List projects that are or will be orphaned.
+\item [$\bullet$ Machine Learning on Users/Projects] Pull analytics from past public Github data to be compiled into a profile.
+\item [$\bullet$ Automated Matching] Automatically rank and match projects to interested contributors based on similarity in skills.
+\item [$\bullet$ Ranking System] Allow individuals to vote on different projects and users to impact how it is displayed on the application.
+\item [$\bullet$ Featured Users/Projects] Feature specific users or projects weekly based on a theme.
+\end{description}
+
+\section{Main features for project}
+For this course, I am looking to implement the following features:
+\begin{itemize}
+\item  Interested Contributors
+\item Projects Looking for Contributors
+\item Projects Looking for Maintainers
+\end{itemize}
+Each category will be stored in its own database and allow searching and sorting over the set of unique features (i.e. years of experience, programming languages, development tools, domain, contact information).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Estimated Schedule}
+
+% http://www.martin-kumm.de/wiki/doku.php?id=Projects:A_LaTeX_package_for_gantt_plots
+\scalebox{0.8}{
+  \hspace{-40pt}
+  \begin{gantt}[xunitlength=0.4cm,fontsize=\small,titlefontsize=\small,drawledgerline=true]{20}{40}
+    \begin{ganttitle}
+      \titleelement{October}{5}
+      \titleelement{November}{21}
+      \titleelement{December}{14}
+    \end{ganttitle}
+    \begin{ganttitle}
+      \titleelement{Week 1}{5}
+      \titleelement{Week 2}{5}
+      \titleelement{Week 3}{5}
+      \titleelement{Week 4}{5}
+      \titleelement{Week 5}{5}
+      \titleelement{Week 6}{5}
+      \titleelement{Week 7}{5}
+      \titleelement{Week 8}{5}
+    \end{ganttitle}
+	\ganttbar[color=myred]{\textbf{Project Proposal}}{4}{3}
+	
+	\ganttbar[color=mygray]{Research Tools$^{1}$}{7}{1}
+	\ganttbar[color=mygray]{Design Website$^{2}$}{8}{7}
+	\ganttbar[color=mygray]{Landing Page \& Login$^{3}$}{10}{1}
+	% I am a project looking for a new home. I am an innovator looking for a cool project.
+	\ganttbar[color=mygray]{Project Marketplace Template$^{4}$}{10}{3}
+	\ganttbar[color=mygray]{Project Pages Template$^{5}$}{12}{2}
+	\ganttbar[color=mygray]{Contributor Marketplace/Pages$^{6}$}{13}{2}
+	\ganttbar[color=mygray]{Set up Django$^{7}$}{14}{3}
+	
+	\ganttbar[color=myred]{\textbf{Progress Report}}{16}{3}
+
+	\ganttbar[color=mygray]{Set up Project Database$^{8}$}{17}{4}
+    \ganttbar[color=mygray]{Set up Contributor Database$^{9}$}{19}{4}
+    
+    \ganttbar[color=pink]{\textbf{Thanksgiving Break}}{23}{3}
+	
+	\ganttbar[color=mygray]{Algorithm for display$^{10}$}{26}{3}
+	\ganttbar[color=myblue]{NLP/ML for statistics$^{11}$}{27}{2}
+	\ganttbar[color=myblue]{Email Notifications$^{12}$}{28}{5}
+	\ganttbar[color=myblue]{Personalize Accounts$^{13}$}{28}{5}
+	
+	\ganttbar[color=myred]{\textbf{Final Video}}{30}{4}
+	\ganttbar[color=myred]{\textbf{Final Report}}{35}{5}
+	
+   % red for deadlines, cross hatch light blue for optional, grey for normal features
+  \end{gantt}
+}
+
+\noindent\rule{8cm}{0.4pt}\\
+\begin{footnotesize}
+Main Features:
+\begin{addmargin}[1em]{2em}
+$^{1}$Research different APIs to be used (i.e. Github, email client)\\
+$^{2}$Generate mockup and outline flow of website\\
+$^{3}$Landing page for browsing with optional login using Github credentials\\
+$^{4}$Page for browsing open projects seeking maintainers or contributors\\
+$^{5}$Page for viewing details about open projects seeking maintainers or contributors\\
+$^{6}$Pages for browsing \& viewing potential contributors\\
+$^{7}$Set up Django framework\\
+$^{8}$Backend database to store project information\\
+$^{9}$Backend database to store contributor information\\
+$^{10}$Determine order for displaying results in marketplace
+\end{addmargin}
+\end{footnotesize}
+\noindent\rule{8cm}{0.4pt}\\
+\begin{footnotesize}
+Additional Features:
+\begin{addmargin}[1em]{2em}
+$^{11}$Pull interesting statistics about user/project from their online pages\\
+$^{12}$Automated email notification for project maintainer/interested contributors if matched\\
+$^{13}$Personalize accounts more\\
+\end{addmargin}
+\end{footnotesize}
+\end{document}
