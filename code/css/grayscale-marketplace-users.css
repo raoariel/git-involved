@@ -149,7 +149,7 @@ a:focus {
     /*color: #fff;*/
     background: url(../img/laptop-stickers.jpg) no-repeat bottom center scroll;
     /*background: url(../img/laptop-street.jpg) no-repeat bottom center scroll;*/
-    background-color: #E3F4FF;
+    /*background-color: #E3F4FF;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -390,15 +390,26 @@ body {
 
 .modal-dialog {
     padding-top: 150px;
+    width: 420px;
 }
 
 .modal-content {
-    background-color: #FCF6EB;
+    /*background-color: #FCF6EB;*/
+    background: url("https://github.com/identicons/opcode9.png") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
     text-align: center;
     color: black;
+    height: 420px;
+    -webkit-filter: brightness(170%);
 }
 
-
+.portfolio /*DOESNT QUITE WORK: ON SMALL WIDTH SCREEN IS WEIRD*/ {
+    max-width: 450px; /*for image on small screen*/
+    text-align: center;
+}
 
 
 #market-heading {
@@ -628,11 +639,11 @@ body {
 /*---------------*/
 
 figure.effect-bubba {
-    background: #9e5406;
+    background: #73390F;
 }
 
 figure.effect-bubba img {
-    opacity: 0.7;
+    opacity: 0.85;
     -webkit-transition: opacity 0.35s;
     transition: opacity 0.35s;
 }
@@ -669,7 +680,7 @@ figure.effect-bubba figcaption::after {
 }
 
 figure.effect-bubba h2 {
-    padding-top: 10%;
+    padding-top: 13%;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
     -webkit-transform: translate3d(0,-20px,0);

@@ -405,7 +405,9 @@ body {
 
 
 
-
+#welcome-message {
+    color: white !important;
+}
 
 #main-section {
     padding-top: 30px;
