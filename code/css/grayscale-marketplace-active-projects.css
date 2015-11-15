@@ -414,6 +414,55 @@ body {
 
 
 
+/* ---------------------------------------------- /*
+ * Modal
+/* ---------------------------------------------- */
+
+.modal-dialog {
+    padding-top: 150px;
+    width: 420px;
+}
+
+.modal-content {
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    text-align: center;
+    color: black;
+    height: 290px;
+    width: 420px;
+    -webkit-filter: brightness(170%);
+}
+
+.modal-content h2 span{
+    font-size: 25pt;
+}
+
+
+.modal-content p {
+    font-size: 16pt;
+}
+
+.modal-body {
+    padding: 40pt 15pt 15pt 15pt;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
