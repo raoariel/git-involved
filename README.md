@@ -4,11 +4,11 @@ Git-invoved hopes to help expand and sustain the vibrant open source software co
 
 ###Documents
 ----------------------------------
-[x] Project Proposal
+* [x] Project Proposal
 
-[ ] Progress Report
+* [ ] Progress Report
 
-[ ] Final Video
+* [ ] Final Video
 
-[ ] Final Report
+* [ ] Final Report
 	
