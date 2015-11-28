@@ -18,5 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^users/', include('users.urls', namespace="users")), # consider change pattern to contributors
+    url(r'^activeProjects/', include('active_projects.urls', namespace="active_projects")),
     url(r'^admin/', include(admin.site.urls)),
 ]
