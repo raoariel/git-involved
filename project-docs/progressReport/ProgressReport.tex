@@ -1,0 +1,167 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usepackage{scrextend}
+\usepackage{pdflscape}
+\usepackage{multicol}
+\usepackage{gantt}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\oddsidemargin0cm
+\topmargin-2cm     
+\textwidth16.5cm 
+\textheight23.5cm  
+
+\newcommand{\question}[2] {\vspace{.25in} \hrule\vspace{0.5em}
+\noindent{\bf #1: #2} \vspace{0.5em}
+\hrule \vspace{.10in}}
+\renewcommand{\part}[1] {\vspace{.10in} {\bf (#1)}}
+
+\newcommand{\myname}{Ariel Rao}
+\newcommand{\myandrew}{arielrao@cmu.edu}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+ 
+\pagestyle{fancyplain}
+\lhead{\fancyplain{}{\textbf{12-780 A2}}}     
+\rhead{\fancyplain{}{\myname\\ \myandrew}}
+\chead{\fancyplain{}{11/28/2015 \\ Progress Report : Git Involved}}
+
+\setlength{\parskip}{1 pt}
+
+\definecolor{mygray}{RGB}{209,209,209}
+\definecolor{myred}{RGB}{255,87,106}
+\definecolor{myblue}{RGB}{0,119,255}
+\setlength\columnsep{50pt}
+
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\begin{document}
+
+\section{Project Progress Report : Git Involved}
+The code is attached as a zip file. It can also be found at \href{http://github.com/raoariel/git-involved}{github.com/raoariel/git-involved}.
+
+\section{Restatement of Purpose}
+The purpose of the project is to develop a web application that helps connect people with projects on Github. Specifically, this application hopes to connect developers and designers with projects that could use their support. This application will also connect orphaned projects and organizations with interested parties.
+
+\section{Project Progress}
+\subsection{Overall}
+For the first few weeks, I worked just the html/js/css for the project. Currently, the project is being converted to run on the Django framework. The remaining work to be done is integrate the SQLite database with the front-end for adding users and projects, browsing content, and searching capabilities.
+
+\subsection{Homepage}
+\begin{multicols}{2}
+First page in user interaction with this site. From here, they can go to one of three pages: 
+\begin{description}
+\item[Contributors] To browse pages of contributors interested in joining a new project
+\item[Active Projects] To browse pages of active projects looking to get new contributors
+\item[Orphaned Projects] To browse pages of projects to be abandoned by current maintainers
+\end{description}
+Users can also scroll down to learn more about this project and the website.
+\columnbreak
+\vspace*{10pt}
+\includegraphics[width=80mm]{index.png}
+\vspace*{30pt}
+\end{multicols}
+
+\subsection{Browse Users}
+\begin{multicols}{2}
+Each icon represents a single individual. 
+On hover, details about individual's interests and skills is displayed. 
+On click, a modal opens with more detailed information about the individual selected.
+The content is initially inputed by users when the wish to sign up (using their Github credentials), and later stored in the SQLite database. The background image is the user's 'unique' icon (pulled from Github). 
+\vspace*{10pt}
+\columnbreak
+\vspace*{5pt}
+\includegraphics[width=80mm]{users.png}
+\end{multicols}
+
+\begin{multicols}{2}
+\textbf{Details}\\
+Modals reveal more detailed information about the selected item. They will also contain links to external references if provided, such as a personal website.
+\vspace{50pt}
+\columnbreak
+\includegraphics[width=70mm]{modal.png}
+\end{multicols}
+
+\subsection{Browse Projects}
+\begin{multicols}{2}
+The project pages (active and orphaned) have a similar layout and flow as the user page. Complimentary information about the project such as a description will be displayed alongside each project.
+\vspace{50pt}
+\columnbreak
+%\includegraphics[width=80mm]{modal.png}
+\includegraphics[width=70mm]{projects.png}
+\end{multicols}
+
+\section{Schedule}
+I have mostly sticked to the schedule outlined . There is still remaining work to be done converting the project for the Django framework but most of it is complete. While planning the schedule, I left enough of a buffer toward the end of the semester with features that would be nice, but are not necessary to the functionality of the site. Thus, I am comfortable that the basics of project will be complete by the end of the semester.
+
+\scalebox{0.65}{
+  \hspace{-40pt}
+  \begin{gantt}[xunitlength=0.4cm,fontsize=\small,titlefontsize=\small,drawledgerline=true]{20}{40}
+    \begin{ganttitle}
+      \titleelement{October}{5}
+      \titleelement{November}{21}
+      \titleelement{December}{14}
+    \end{ganttitle}
+    \begin{ganttitle}
+      \titleelement{Week 1}{5}
+      \titleelement{Week 2}{5}
+      \titleelement{Week 3}{5}
+      \titleelement{Week 4}{5}
+      \titleelement{Week 5}{5}
+      \titleelement{Week 6}{5}
+      \titleelement{Week 7}{5}
+      \titleelement{Week 8}{5}
+    \end{ganttitle}
+	\ganttbar[color=myred]{\textbf{Project Proposal}}{4}{3}
+	
+	\ganttbar[color=black]{Research Tools}{6}{2}
+	\ganttbar[color=black]{Design Website}{8}{7}
+	\ganttbar[color=black]{Landing Page \& Login}{10}{1}
+	% I am a project looking for a new home. I am an innovator looking for a cool project.
+	\ganttbar[color=black]{Project Marketplace Template}{10}{3}
+	\ganttbar[color=black]{Project Pages Template}{12}{2}
+	\ganttbar[color=black]{Contributor Marketplace/Pages}{13}{2}
+	\ganttbar[color=mygray]{Set up Django}{14}{3}
+	
+	\ganttbar[color=black]{Set up Project Database}{17}{4}
+    \ganttbar[color=black]{Set up Contributor Database}{19}{4}
+    
+    \ganttbar[color=pink]{\textbf{Thanksgiving Break}}{23}{3}
+	
+	\ganttbar[color=myred]{\textbf{Progress Report}}{25}{3}
+	 
+	\ganttbar[color=mygray]{Algorithm for display}{26}{3}
+	\ganttbar[color=myblue]{NLP/ML for statistics}{27}{2}
+	\ganttbar[color=myblue]{Email Notifications}{28}{5}
+	\ganttbar[color=myblue]{Personalize Accounts}{28}{5}
+	
+	\ganttbar[color=myred]{\textbf{Final Video}}{30}{4}
+	\ganttbar[color=myred]{\textbf{Final Report}}{34}{6}
+	
+   % red for deadlines, cross hatch light blue for optional, grey for normal features
+  \end{gantt}
+}
+
+$^{*}$ The black marks completed tasks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
