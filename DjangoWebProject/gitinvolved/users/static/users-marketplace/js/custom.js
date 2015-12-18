@@ -86,7 +86,7 @@
 				- destroy:
 				$( selector ).cbpQTRotator( 'destroy' );
 				*/
-
+// 
 				$( '#cbp-qtrotator' ).cbpQTRotator();
 
 			} );
