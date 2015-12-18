@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Git Involved - Users</title>
@@ -8,10 +8,14 @@
     <link rel="stylesheet" type="text/css" href="{% static 'users-marketplace/css/grayscale-marketplace-users.css' %}">
     
     <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/css/select2.min.css" rel="stylesheet" />
+    
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
@@ -68,153 +72,91 @@
         </div>
     </header>
 
+    <!-- About Section -->
+    <section id="content" class="container">
+        <br><br><br><br>
+        <section id="search" class="container-cf text-center">
+            <div class="row">
+                
+                <div class="col-lg-8 col-lg-offset-2">
+                    <fieldset class="clearfix">
+                        <select id="skill-search" multiple="multiple" style="width: 75%;">
+                            <optgroup label="Skills">
+                                <option>HTML</option>
+                                <option>CSS</option>
+                                <option>Java</option>
+                                <option>Javascript</option>
+                                <option>Coffeescript</option>
+                                <option>Python</option>
+                                <option>Ruby</option>
+                                <option>Ruby on Rails</option>
+                                <option>Django</option>
+                                <option>R</option>
+                                <option>S</option>
+                                <option>Matlab</option>
+                                <option>C</option>
+                                <option>C++</option>
+                                <option>Shell</option>
+                                <option>Perl</option>
+                                <option>Lisp</option>
+                                <option>Objective-C</option>
+                                <option>Cobol</option>
+                                <option>C#</option>
+                                <option>Php</option>
+                                <option>Haml</option>
+                                <option>SML</option>
+                                <option>Coq</option>
+                                <option>OCaml</option>
+                                <option>Haskell</option>
+                                <option>Prolog</option>
+                                <option>Verilog</option>
+                                <option>Assembly</option>
+                            </optgroup>
+                            <optgroup label="Interests">
+                                <option>Data Science</option>
+                                <option>Statistics</option>
+                                <option>Machine Learning</option>
+                                <option>Systems Architecture</option>
+                                <option>Formal Verification</option>
+                                <option>Natural Language Processing</option>
+                                <option>Speech Processing</option>
+                                <option>Machine Translation</option>
+                                <option>Computer Vision</option>
+                                <option>Linguistics</option>
+                                <option>Cloud Computing</option>
+                                <option>Information Security</option>
+                                <option>Cryptography</option>
+                                <option>Production Operations</option>
+                                <option>Logistics</option>
+                                <option>Planning</option>
+                                <option>Unix Systems</option>
+                                <option>Game Design</option>
+                                <option>Web Development</option>
+                                <option>Android Development</option>
+                                <option>iOS Development</option>
+                                <option>Functional Programming</option>
+                                <option>Imperative Programming</option>
+                                <option>Object Oriented Programming</option>
+                                <option>Dynamic Programming</option>
+                                <option>Parallel Systems</option>
+                                <option>Distributed Systems</option>
+
+                            </optgroup>
+                        </select>
+                        <i class="fa fa-search" id="submit" onClick="searchUsers();"></i>
+                    </fieldset>
+                </div>
+            </div>
+        </section>
+    </section>
+
     <!-- Portfolio start -->
 
     <section id="portfolio" class="pfblock">  
         
         <div class="container">
-    
-            <!-- <div class="row">
-
-                <div class="col-sm-6 col-sm-offset-3">
-
-                    <div class="pfblock-header wow fadeInUp">
-                        <h2 class="pfblock-title">My works</h2>
-                        <div class="pfblock-line"></div>
-                        <div class="pfblock-subtitle">
-                            No one lights a lamp in order to hide it behind the door: the purpose of light is to create more light, to open people’s eyes, to reveal the marvels around.
-                        </div>
-                    </div>
-
-                </div> 
-
-            </div>-->
             
-            
-            <div class="row">
-                
-                <div class="col-xs-4 col-sm-3 col-md-3">
-                    
-                    <div class="grid wow zoomIn" id="raoariel">
-                        <figure class="effect-bubba" onclick="openModal();">
-                        <!-- <figure class="effect-bubba"> -->
-                            <img src="https://github.com/identicons/arielrao.png" alt="img01"/>
-                            <figcaption>
-                                <h2>
-                                    <span>raoariel</span>
-                                </h2>
-                                <p>
-                                    java, python, sml
-                                    <br><br>
-                                    ml, stats
-                                </p>
-                            </figcaption>           
-                        </figure>
-                    </div>
-                    
-                </div>
-
-                <div class="col-xs-4 col-sm-3 col-md-3">
-            
-                    <div class="grid wow zoomIn" id="opcode1">
-                        <figure class="effect-bubba" id="test">
-                            <img src="https://github.com/identicons/opcode1.png" alt="img01"/>
-                            <figcaption>
-                                <h2>
-                                    <span>opcode1</span>
-                                </h2>
-                                <p>c, c
-                                    ++, cobol
-                                    <br><br>
-                                    computer vision
-                                </p>
-
-                            </figcaption>           
-                        </figure>
-                    </div>
-                    
-                </div>
-                
-                <div class="col-xs-4 col-sm-3 col-md-3">
-            
-                    <div class="grid wow zoomIn" id="opcode02">
-                        <figure class="effect-bubba">
-                            <img src="https://github.com/identicons/opcode02.png" alt="img01"/>
-                            <figcaption>
-                                <h2>
-                                    <span>opcode02</span>
-                                </h2>
-                                <p>
-                                    sml, haskell, coq
-                                    <br><br>
-                                    linguistics
-                                </p>
-                            </figcaption>           
-                        </figure>
-                    </div>
-                    
-                </div>
-                
-                <div class="col-xs-4 col-sm-3 col-md-3">
-            
-                    <div class="grid wow zoomIn" id="opcode81">
-                        <figure class="effect-bubba">
-                            <img src="https://github.com/identicons/opcode81.png" alt="img01"/>
-                            <figcaption>
-                                <h2>
-                                    <span>opcode81</span>
-                                </h2>
-                                <p>
-                                    probcog, ocaml, assembly
-                                    <br><br>
-                                    unix systems
-                                </p>
-                            </figcaption>           
-                        </figure>
-                    </div>
-                    
-                </div>
-                
-                <div class="col-xs-4 col-sm-3 col-md-3">
-            
-                    <div class="grid wow zoomIn" id="opcode9">
-                        <figure class="effect-bubba">
-                            <img src="https://github.com/identicons/opcode9.png" alt="img01"/>
-                            <figcaption>
-                                <h2>
-                                    <span>opcode9</span>
-                                </h2>
-                                <p>
-                                    html, css, javascript
-                                    <br><br>
-                                    web design
-                                </p>
-                            </figcaption>           
-                        </figure>
-                    </div>
-                    
-                </div>
-                
-                <div class="col-xs-4 col-sm-3 col-md-3">
-            
-                    <div class="grid wow zoomIn">
-                        <figure class="effect-bubba" id="opcode187">
-                            <img src="https://github.com/identicons/opcode187.png" alt="img01"/>
-                            <figcaption>
-                                <h2>
-                                    <span>opcode187</span>
-                                </h2>
-                                <p>
-                                    haml, coffeescript
-                                    <br><br>
-                                    logic
-                                </p>
-                            </figcaption>           
-                        </figure>
-                    </div>
-                    
-                </div>
-                
+            <div class="row" id="user-blocks">
             </div>
 
 
@@ -243,17 +185,6 @@
             <p>Copyright &copy; Your Website 2014</p>
         </div>
     </footer>
-<!-- 
-    {% if users_list %}
-        <ul>
-        {% for question in users_list %}
-            <li><a href="{% url 'users:detail' user.username %}">{{ user.username }}</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No users match.</p>
-    {% endif %}
- -->
 
     <!-- jQuery -->
     <script src="{% static 'users-marketplace/js/jquery.js' %}"></script>
@@ -266,6 +197,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{% static 'users-marketplace/js/grayscale.js' %}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.1/js/select2.min.js"></script>
 
     <!-- Scrolling -->
     <script src="{% static 'users-marketplace/js/jquery.parallax-1.1.3.js' %}"></script> <!-- for loading scrool-->
@@ -274,5 +206,6 @@
     <script src="{% static 'users-marketplace/js/waypoints.min.js' %}"></script> <!-- -->
     <script src="{% static 'users-marketplace/js/custom.js' %}"></script>
     <script src="{% static 'users-marketplace/js/update-users.js' %}"></script>
+
   </body>
 </html>

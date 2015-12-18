@@ -15,8 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from . import views
+from users.views import *
+from active_projects.views import *
+from orphan_projects.views import *
 
 urlpatterns = [
-    url(r'^users/', include('users.urls', namespace="users")), # consider change pattern to contributors
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', views.index, name='index'),
+    url(r'^users/', include('users.urls', namespace="users"), name='users'), # consider change pattern to contributors
+    url(r'^activeProjects/', include('active_projects.urls', namespace="active_projects"), name='active_projects'),
+    url(r'^getUsers/', getUsers, name="getUsers"),
+    url(r'^searchUsers/', searchUsers, name="searchUsers"),
+    
 ]

@@ -147,7 +147,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     /*color: #fff;*/
-    background: url(../img/laptop-stickers.jpg) no-repeat bottom center scroll;
+    background: url(../content/laptop-stickers.jpg) no-repeat bottom center scroll;
     /*background: url(../img/laptop-street.jpg) no-repeat bottom center scroll;*/
     /*background-color: #E3F4FF;*/
     -webkit-background-size: cover;
@@ -727,3 +727,131 @@ figure.effect-bubba:hover p {
 figcaption h2 span {
     font-size:16px;
 }
+
+
+
+/* ---------- GENERAL ---------- */
+
+/*body {
+    background: #61646d;
+    color: #000;
+    font: 14px/1.5em "Open Sans", sans-serif;
+    margin: 0;
+}*/
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+select {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.5em;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    -webkit-appearance: none;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+.clearfix {
+     *zoom: 1; 
+     width: 300px;
+ }
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table; 
+}
+.clearfix:after { clear: both; }
+
+.container-cf {
+    height: 44px;
+    left: 50%;
+    margin: -22px 0 0 -141px;
+    position: relative;
+    top: 50%;
+}
+
+.select2-selection__rendered {
+    width: 200px;
+}
+.select2-results__option {
+    color:black !important; 
+}
+
+.select2-results__option--highlighted {
+    background-color: #BAD5FF !important;
+}
+
+.select2-selection__choice {
+    color:black !important; 
+}
+
+/* ---------- SEARCH ---------- */
+
+#search {
+    /*background: #42454e;*/
+    border-radius: 3px;
+    display: inline-block;
+    padding: 7px;
+}
+
+#search input {
+    float: left;
+}
+
+#search input[type="search"],
+#search input[type="submit"] {
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+#search input[type="search"] {
+    background: #fff;
+    color: #42454e;
+    min-width: 400px;
+    padding: 0px 8px;
+}
+
+#search input[type="submit"] {
+    background: #1bba9a;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 7px;
+    padding: 6px 10px;
+}
+
+#search input[type="submit"]:hover {
+    background: #189e83;
+}
+
+#search input[type="search"]::-webkit-input-placeholder { color: #42454e; }
+#search input[type="search"]:-moz-placeholder { color: #42454e; }
+#search input[type="search"]:-ms-input-placeholder { color: #42454e; }
+
+#link {
+    color: black;
+    font-size: 16pt;
+}
+
+#link-name {
+    font-weight: bold;
+}
+
+#submit:hover {
+        cursor: pointer;
+};
